@@ -8,7 +8,7 @@ const MovieList = props => {
         .filter(
           el =>
             el.rating >= props.rating &&
-            el.title.toLowerCase().includes(props.titleFilter.trim())
+            el.title.toLowerCase().includes(props.titleFilter.trim().toLowerCase())
         )
         .map((el, i) => (
           <div className="movie-card" key={i}>
